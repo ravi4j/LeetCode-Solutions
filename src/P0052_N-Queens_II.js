@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {string[][]}
  */
-var solveNQueens = function(n) {
+var totalNQueens = function(n) {
 	var count = [];
 	nQueens(n , 0 , [] , count);
 	return count.length ;
