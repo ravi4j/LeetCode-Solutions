@@ -19,4 +19,4 @@ console.log(result);
 
 var n = 4;
 var result = climbStairs(n);
-console.log(result);
+console.log(result); 

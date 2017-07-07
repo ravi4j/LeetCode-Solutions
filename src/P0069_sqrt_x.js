@@ -18,4 +18,4 @@ var mySqrt = function(x) {
 
 var x = 25;
 var result = mySqrt(x);
-console.log(result);
+console.log(result); 

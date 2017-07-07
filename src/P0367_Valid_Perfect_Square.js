@@ -31,4 +31,4 @@ console.log(result);
 
 var x = 24;
 var result = isPerfectSquare(x);
-console.log(result);
+console.log(result); 
