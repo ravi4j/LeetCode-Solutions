@@ -38,8 +38,6 @@ var search = function(nums, target) {
     } else {
      	return binarySearch(nums , 0 , nums.length - 1 , target);
     }	
-
-    return -1;
 };
 
 var binarySearch = function(nums , l , r , target){
@@ -73,7 +71,7 @@ nums  = [4, 5, 6, 7, 0, 1, 2] , target = 4;
 result = search(nums , target);
 console.log(result);
 
-nums  = [1, 1, 3, 4, 5, 6, 7] , target = 7;
+nums  = [1, 1, 3, 4, 5, 5,6, 7,7] , target = 7;
 result = search(nums , target);
 console.log(result); 
 
