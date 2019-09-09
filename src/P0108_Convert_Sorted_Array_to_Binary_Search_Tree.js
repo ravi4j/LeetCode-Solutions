@@ -21,7 +21,8 @@ var helper = function(nums, start, end) {
         return null;
     }
     var mid = start + parseInt((end - start) / 2);
-    var node = new TreeNode(nums[mid]);
+    var val = nums[mid];
+    var node = new TreeNode(val);
     node.left = helper(nums, start, mid - 1);
     node.right = helper(nums, mid + 1, end);
     return node;
