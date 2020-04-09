@@ -73,21 +73,22 @@ class P00117_Populating_Next_Right_Pointers_In_Each_Node2 {
 		System.out.print(root.val + "\n");
 		printTreeUtil(root.left, space);
 	}
+
+	static class Node {
+		public int val;
+		public Node left;
+		public Node right;
+		public Node next;
+
+		public Node() {
+		}
+
+		public Node(int _val, Node _left, Node _right, Node _next) {
+			val = _val;
+			left = _left;
+			right = _right;
+			next = _next;
+		}
+	};
 }
 
-class Node {
-	public int val;
-	public Node left;
-	public Node right;
-	public Node next;
-
-	public Node() {
-	}
-
-	public Node(int _val, Node _left, Node _right, Node _next) {
-		val = _val;
-		left = _left;
-		right = _right;
-		next = _next;
-	}
-};

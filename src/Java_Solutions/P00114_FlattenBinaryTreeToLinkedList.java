@@ -48,14 +48,15 @@ class P00114_FlattenBinaryTreeToLinkedList {
 		System.out.print(root.val + "\n");
 		printTreeUtil(root.left ,space);
 	}
-}
 
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-
-	TreeNode(int x) {
-		val = x;
+	static class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+		TreeNode(int x) {
+			val = x;
+		}
 	}
 }
+
+
