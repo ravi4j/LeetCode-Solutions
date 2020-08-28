@@ -1,0 +1,66 @@
+<document>
+    <header>
+        <docType>CARRIER_SHIPMENT_STATUS</docType>
+        <docVersion>1.0</docVersion>
+        <domain>336</domain>
+        <account>671</account>
+        <ieControlNumber>100868733780002</ieControlNumber>
+        <modeProvider>TONI</modeProvider>
+        <throttleType>ME ID</throttleType>
+        <throttleValue>459953265</throttleValue>        <!--  ME Number -->
+        <origApplication>IE</origApplication>
+        <targetApplication>ISD</targetApplication>
+        <timestamp>2010-03-02 00:00</timestamp>
+    </header>
+    <body class="carrierShipmentStatus">
+        <!--customerRef>PRO_05170911</customerRef-->
+        <scac>TONI</scac>
+        <equipmentNumber>54012</equipmentNumber>
+        <ltlClass>55</ltlClass>
+        <modeType></modeType>
+        <transitSpeed></transitSpeed>
+        <modeExecutionId>459953265</modeExecutionId>  <!--  ME Number -->
+        <references>
+            <reference>
+                <value>459953265</value> <!--  ME Number -->
+                <type>LOOKUP</type>
+            </reference>
+        </references>
+        <checkCalls>
+            <checkCall>
+                <sequenceNumber>1</sequenceNumber>
+                <weight>12000</weight>
+                <weightUOM>LBS</weightUOM>
+                <type>ARRIVAL</type>
+                <reasonCode>AB</reasonCode>
+                <secondaryReasonCode></secondaryReasonCode>
+                <reasonDescription>Normal Status</reasonDescription>
+                <dateTime>2020-03-31 08:30</dateTime>
+                <equipmentNumber>54012</equipmentNumber>
+                <statusCode>X6</statusCode>
+                <lastKnownPosition>DALLAS</lastKnownPosition>
+                <statusDescription>Pick-up Appointment Date/Time</statusDescription>
+                <latitude>35.08</latitude>
+                <longitude>-106.65</longitude>
+            </checkCall>
+
+            <!-- <checkCall> -->
+            <!-- <sequenceNumber>1</sequenceNumber> -->
+            <!-- <weight>12000</weight> -->
+            <!-- <weightUOM>LBS</weightUOM> -->
+            <!-- <type>LOADED</type>  -->
+            <!-- <reasonCode>AB</reasonCode>  -->
+            <!-- <secondaryReasonCode></secondaryReasonCode>  -->
+            <!-- <reasonDescription>Normal Status</reasonDescription> -->
+            <!-- <dateTime>2020-03-31 08:00</dateTime> -->
+            <!-- <equipmentNumber>54012</equipmentNumber> -->
+            <!-- <statusCode>X6</statusCode>   -->
+            <!-- <lastKnownPosition>DALLAS</lastKnownPosition> -->
+            <!-- <statusDescription>Pick-up Appointment Date/Time</statusDescription> -->
+            <!-- <latitude>35.08</latitude> -->
+            <!-- <longitude>-106.65</longitude> -->
+            <!-- </checkCall> -->
+
+        </checkCalls>
+    </body>
+</document>
