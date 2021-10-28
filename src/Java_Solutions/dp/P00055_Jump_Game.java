@@ -1,18 +1,18 @@
 package dp;
 
 import java.util.Arrays;
-
+//https://shunchizhou.com/LeetCode/leetCode-55-Jump-Game.html
 public class P00055_Jump_Game {
-    enum Algorithm {RECURSIVE, RECURSIVE_MEMO, BOTTOM_UP, GREEDY}
+    enum Algorithm {RECURSIVE, RECURSIVE_MEMO, BOTTOM_UP, GREEDY , GREEDY2 , DP}
 
     public static void main(String[] args) {
         P00055_Jump_Game solution = new P00055_Jump_Game();
         int[] numbers = new int[]{2, 3, 1, 1, 4};
-        boolean result = solution.canJump(numbers, Algorithm.GREEDY);
+        boolean result = solution.canJump(numbers, Algorithm.DP);
         System.out.println(result);
         assert result;
         numbers = new int[]{3, 2, 1, 0, 4};
-        result = solution.canJump(numbers, Algorithm.GREEDY);
+        result = solution.canJump(numbers, Algorithm.DP);
         System.out.println(result);
         assert !result;
 
@@ -27,6 +27,8 @@ public class P00055_Jump_Game {
             case RECURSIVE_MEMO -> canJumpRecursiveWithMemo(nums, 0, memo);
             case BOTTOM_UP -> canJumpBottomUP(nums, memo);
             case GREEDY -> canJumpGreedy(nums);
+            case GREEDY2 -> canJumpGreedy(nums);
+            case DP -> canJumpDP(nums);
         };
     }
 
@@ -74,6 +76,18 @@ public class P00055_Jump_Game {
         return memo[0] == 1;
     }
 
+    public boolean canJumpDP(int[] nums) {
+        int n = nums.length;
+        boolean[] dp = new boolean[n];
+        Arrays.fill(dp , false);
+        dp[n-1] = true;
+        for(int i = n - 2; i >= 0 ; i--){
+            int farthestJump = Math.min(i + nums[i] , n - 1);
+            dp[i] = dp[farthestJump];
+        }
+        return dp[0];
+    }
+
     public boolean canJumpGreedy(int[] nums) {
         int n = nums.length - 1;
         int lastPosition = n;
@@ -84,6 +98,17 @@ public class P00055_Jump_Game {
         }
         // check if we can reach from index 0
         return lastPosition == 0;
+    }
+
+    public boolean canJumpGreedy2(int[] nums) {
+        int curFarthest = 0;
+        for (int i = 0; i <= nums.length - 1; i++) {
+            if(i > curFarthest){
+                return false;
+            }
+            curFarthest = Math.max(curFarthest, i + nums[i]);
+        }
+        return true;
     }
 
 }
