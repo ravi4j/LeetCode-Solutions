@@ -1,4 +1,4 @@
-package pattern.slidingwindows.twopointers;
+package pattern.twopointers;
 
 import java.util.Arrays;
 

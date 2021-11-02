@@ -1,4 +1,4 @@
-package pattern.slidingwindows.twopointers;
+package pattern.twopointers;
 
 public class RemoveElements {
     public static void main(String[] args) {
