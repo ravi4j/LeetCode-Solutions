@@ -8,30 +8,26 @@ public class PermutationInAStringProblemChallenge1 {
         PermutationInAStringProblemChallenge1 solution = new PermutationInAStringProblemChallenge1();
         String str = "oidbcaf";
         String pattern = "abc";
-        boolean expect = true;
         boolean actual = solution.findPermutation(str, pattern);
-        assert expect == actual;
+        assert actual;
         System.out.println(actual);
 
         str = "odicf";
         pattern = "dc";
-        expect = false;
         actual = solution.findPermutation(str, pattern);
-        assert expect == actual;
+        assert !actual;
         System.out.println(actual);
 
         str = "bcdxabcdy";
         pattern = "bcdyabcdx";
-        expect = true;
         actual = solution.findPermutation(str, pattern);
-        assert expect == actual;
+        assert actual;
         System.out.println(actual);
 
         str = "aaacb";
         pattern = "abc";
-        expect = true;
         actual = solution.findPermutation(str, pattern);
-        assert expect == actual;
+        assert actual;
         System.out.println(actual);
 
     }
